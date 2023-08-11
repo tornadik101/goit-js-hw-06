@@ -18,8 +18,9 @@ function createBoxes() {
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
-    box.style.width = `${30 + i * 10}px`;
-    box.style.height = `${30 + i * 10}px`;
+    const size = 30 + i * 10;
+    box.style.width = `${size}px`;
+    box.style.height = `${size}px`;
     box.style.backgroundColor = getRandomHexColor();
     boxes.push(box);
   }
@@ -29,5 +30,7 @@ function createBoxes() {
 
 function destroyBoxes() {
   boxesContainer.innerHTML = '';
+  input.value = '';
+
 }
 
